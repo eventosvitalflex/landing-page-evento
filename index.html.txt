@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Check-in do Evento</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Check-in do Evento</h1>
+        <div id="check-in-form">
+            <h2>Distribuidores</h2>
+            <label for="codigo">Digite seu Código:</label>
+            <input type="text" id="codigo" placeholder="Código de cadastro">
+            <button onclick="checkInDistribuidor()">Confirmar Check-in</button>
+        </div>
+
+        <div id="guest-form">
+            <h2>Convidados</h2>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Seu nome">
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" placeholder="Seu telefone">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Seu e-mail">
+            <button onclick="checkInConvidado()">Confirmar Check-in</button>
+        </div>
+
+        <div id="confirmation" style="display: none;">
+            <h2>Confirmação de Check-in</h2>
+            <p id="confirmacao-mensagem"></p>
+            <button onclick="exportarDados()">Exportar para Planilha</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
